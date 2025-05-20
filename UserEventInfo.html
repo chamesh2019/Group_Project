@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Events - EventMaster</title>
+    <link rel="stylesheet" href="static/css/base.css" />
+    <link rel="stylesheet" href="static/css/navbar.css" />
+    <link rel="stylesheet" href="static/css/footer.css" />
+    <link rel="stylesheet" href="static/css/style.css" />
+
+    <!-- font awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo-section">
+        <i class="far fa-calendar-alt"></i>
+        <span>EventMaster</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#" class="events-link active"
+          >Events
+          <div class="dropdown-menu">
+            <a href="#">Add Event</a>
+            <a href="#">Event List</a>
+          </div>
+        </a>
+      </div>
+      <div class="auth-section">
+        <button class="login-btn">Login</button>
+      </div>
+    </div>
+
+    <main>
+      <div class="container">
+        <h1 class="main-title">My Event Dashboard</h1>
+
+        <div class="tabs">
+          <button class="tab active" onclick="switchTab('upcoming', event)">
+            Upcoming
+          </button>
+          <button class="tab" onclick="switchTab('past', event)">
+            Past Events
+          </button>
+        </div>
+        <div id="upcoming" class="events-section">
+          <div class="event-card">
+            <img
+              src="static/images/event-placeholder.jpg"
+              alt="Tech Conference"
+            />
+            <div class="event-details">
+              <div>
+                <h2>Tech Conference 2025</h2>
+                <p>
+                  Join the biggest tech conference of the year featuring expert
+                  speakers, workshops, and networking opportunities.
+                </p>
+                <p><strong>Ticket Price:</strong> $200</p>
+                <p><strong>Date:</strong> May 30, 2025</p>
+                <p><strong>Venue:</strong> University of Kelaniya</p>
+                <p><strong>Remaining Days:</strong> 10 days</p>
+              </div>
+              <div class="event-actions">
+                <a href="#" class="btn btn-primary"
+                  ><i class="fas fa-ticket-alt"></i> View Ticket</a
+                >
+                <a href="#" class="btn btn-secondary"
+                  ><i class="fas fa-calendar-alt"></i> Add to Calendar</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Event card 2 -->
+          <div class="event-card">
+            <img
+              src="static/images/event-placeholder.jpg"
+              alt="Music Festival"
+            />
+            <div class="event-details">
+              <div>
+                <h2>Annual Music Festival</h2>
+                <p>
+                  Experience a day filled with amazing performances from top
+                  local and international artists.
+                </p>
+                <p><strong>Ticket Price:</strong> $120</p>
+                <p><strong>Date:</strong> June 15, 2025</p>
+                <p><strong>Venue:</strong> University of Kelaniya</p>
+                <p><strong>Remaining Days:</strong> 26 days</p>
+              </div>
+              <div class="event-actions">
+                <a href="#" class="btn btn-primary"
+                  ><i class="fas fa-ticket-alt"></i> View Ticket</a
+                >
+                <a href="#" class="btn btn-secondary"
+                  ><i class="fas fa-calendar-alt"></i> Add to Calendar</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="past" class="events-section hidden">
+          <div class="event-card">
+            <img
+              src="static/images/event-placeholder.jpg"
+              alt="Business Workshop"
+            />
+            <div class="event-details">
+              <div>
+                <h2>Business Leadership Workshop</h2>
+                <p>
+                  A comprehensive workshop focused on developing leadership
+                  skills for modern business challenges.
+                </p>
+                <p><strong>Ticket Price:</strong> $150</p>
+                <p><strong>Date:</strong> April 15, 2025</p>
+                <p><strong>Venue:</strong> University of Kelaniya</p>
+                <p><strong>Status:</strong> Attended</p>
+              </div>
+              <div class="event-actions">
+                <a href="#" class="btn btn-secondary"
+                  ><i class="fas fa-certificate"></i> View Certificate</a
+                >
+                <a href="#" class="btn btn-secondary"
+                  ><i class="fas fa-star"></i> Rate Event</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="event-card">
+            <img
+              src="static/images/event-placeholder.jpg"
+              alt="Science Summit"
+            />
+            <div class="event-details">
+              <div>
+                <h2>Science & Innovation Summit</h2>
+                <p>
+                  An exploration of the latest breakthroughs in science and
+                  technology shaping our future.
+                </p>
+                <p><strong>Ticket Price:</strong> $180</p>
+                <p><strong>Date:</strong> March 28, 2025</p>
+                <p><strong>Venue:</strong> University of Kelaniya</p>
+                <p><strong>Status:</strong> Attended</p>
+              </div>
+              <div class="event-actions">
+                <a href="#" class="btn btn-secondary"
+                  ><i class="fas fa-certificate"></i> View Certificate</a
+                >
+                <a href="#" class="btn btn-secondary"
+                  ><i class="fas fa-star"></i> Rate Event</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Summary -->
+        <div id="summary_upcoming" class="summary">
+          <p><strong>Registered Events:</strong> <span>2</span></p>
+          <p><strong>Total Cost:</strong> <span>$320</span></p>
+          <p><strong>Next Event Date:</strong> <span>May 30, 2025</span></p>
+          <p><strong>Payment Status:</strong> <span>Completed</span></p>
+        </div>
+
+        <div id="summary_pastevent" class="summary hidden">
+          <p><strong>Total Attended Events:</strong> <span>2</span></p>
+          <p><strong>Total Spent:</strong> <span>$330</span></p>
+          <p><strong>Last Event Date:</strong> <span>April 15, 2025</span></p>
+          <p><strong>Certificates Earned:</strong> <span>2</span></p>
+        </div>
+      </div>
+
+      <script>
+        function switchTab(tab, event) {
+          document
+            .querySelectorAll(".tab")
+            .forEach((btn) => btn.classList.remove("active"));
+          event.target.classList.add("active");
+
+          document
+            .querySelectorAll(".events-section")
+            .forEach((section) => section.classList.add("hidden"));
+          document.getElementById(tab).classList.remove("hidden");
+
+          document
+            .querySelectorAll(".summary")
+            .forEach((s) => s.classList.add("hidden"));
+          document
+            .getElementById(
+              "summary_" + (tab === "past" ? "pastevent" : "upcoming")
+            )
+            .classList.remove("hidden");
+        }
+      </script>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-section logo-section">
+          <i class="far fa-calendar-alt"></i>
+          <span>EventMaster</span>
+          <p>
+            Organize successful events with our intuitive platform. Manage every
+            detail, from planning to memories.
+          </p>
+        </div>
+
+        <div class="footer-section links-section">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Add Event</a></li>
+            <li><a href="#">Event List</a></li>
+            <li><a href="UserEventInfo.html">Profile</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section courses-section">
+          <ul>
+            <li>CS/2022/XXX</li>
+            <li>CS/2022/XXX</li>
+            <li>CS/2022/XXX</li>
+            <li>CS/2022/XXX</li>
+            <li>CS/2022/XXX</li>
+            <li>CS/2022/XXX</li>
+          </ul>
+        </div>
+
+        <div class="footer-section contact-section">
+          <div class="contact-info">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>
+              Faculty of Computing and Technology<br />University of Kelaniya
+            </p>
+          </div>
+          <div class="contact-info">
+            <i class="fas fa-phone"></i>
+            <p>077 7 123 123</p>
+          </div>
+          <div class="contact-info">
+            <i class="fas fa-envelope"></i>
+            <p>management@eventmaster.lk</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>2025 All rights reserved by Event Master</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

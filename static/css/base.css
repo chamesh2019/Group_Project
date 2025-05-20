@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  padding-top: 4rem; /* Ensure content starts below the fixed navbar */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content will grow to fill available space, pushing footer to bottom */
+main {
+  flex: 1;
+}
