@@ -45,6 +45,11 @@
   background-color: #f5f5f5;
 }
 
+.nav-links a.active {
+  color: #4052e4;
+  background-color: #f5f5f5;
+}
+
 .auth-section .login-btn {
   background-color: #4052e4;
   color: white;

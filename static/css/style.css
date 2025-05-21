@@ -40,18 +40,6 @@ main {
   position: relative;
 }
 
-.tabs:after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 3px;
-  background-color: #4052e4;
-  border-radius: 3px;
-}
-
 .tab {
   padding: 12px 30px;
   margin: 0 15px;
